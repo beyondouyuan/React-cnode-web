@@ -2,9 +2,9 @@
 * @Author: beyondouyuan
 * @Date:   2018-05-06 14:56:26
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2018-05-06 15:17:06
+* @Last Modified time: 2018-05-06 18:33:48
 */
-const base = 'https://cnodejs.org/api/v1'
+// const base = 'https://cnodejs.org/api/v1'
 
 const urls = {
     accesstoken: '/accesstoken', // get user detail params accesstoken
@@ -26,7 +26,8 @@ const urls = {
 
 // 获取对应的请求路径
 const parseAPI = api => {
-    return `${basePath}${urls[api]}`
+    // return `${basePath}${urls[api]}`
+    return `${urls[api]}`
 }
 
 export default parseAPI

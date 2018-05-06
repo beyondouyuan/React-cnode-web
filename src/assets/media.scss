@@ -1,0 +1,48 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-05-06 19:56:52
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-05-06 20:14:57
+*/
+
+@charset "UTF-8";
+@import "variable.scss";
+
+@media screen and(max-width: $width) {
+    .main-container {
+        width: 100%;
+
+        .topics-container {
+            margin-left: 10px;
+            width: calc(100% - #{$sidebarWidth + 40});
+        }
+    }
+
+    .sidebar-container,
+    .release-sidebar {
+        margin-right: 10px;
+    }
+
+    .header-container .header-wrapper,
+    .footer-container .footer-wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+
+@media screen and(max-width: 992px) {
+
+    .topics-container {
+        width: calc(100% - 20px) !important;
+    }
+
+    .sidebar-container,
+    .release-sidebar {
+        display: none;
+    }
+
+    .reply .reply-content {
+        padding-left: 0 !important;
+    }
+}

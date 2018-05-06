@@ -1,0 +1,53 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-05-06 19:21:39
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-05-06 20:29:10
+*/
+@import '../../assets/_variable.scss';
+
+.header-container {
+    position: relative;
+    z-index: 10;
+    padding: 10px 10px 15px 0;
+    background-color: #444444;
+
+    .header-wrapper {
+        width: $width;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .logo {
+        float: left;
+
+        img {
+            width: 125px;
+            pointer-events: none;
+        }
+    }
+    .navigation {
+        margin-top: 8px;
+        float: right;
+
+        a {
+            position: relative;
+            margin-left: 20px;
+            color: #CCCCCC;
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+        .unread {
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: -3px;
+                right: -9px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #FF5500;
+            }
+        }
+    }
+}

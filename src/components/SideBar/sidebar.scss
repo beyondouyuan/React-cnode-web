@@ -1,0 +1,87 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-05-06 19:31:08
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-05-06 20:25:24
+*/
+@import '../../assets/_variable.scss';
+
+.sidebar-container {
+    width: $sidebarWidth;
+    float: right;
+
+    .person-container {
+        border-radius: 5px;
+        background-color: #FFFFFF;
+    }
+
+    .header-box {
+        padding: 10px;
+        background-color: $boxTopColor;
+    }
+
+    .info-box  {
+        padding: 10px;
+
+        img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            background-color: #F7F7F7;
+        }
+        .nickname {
+            margin-left: 15px;
+            color: #333333;
+            cursor: pointer;
+        }
+    }
+    .topic-publish {
+        padding: 0 0 10px 10px;
+
+        a {
+            display: inline-block;
+            position: relative;
+            margin: 5px 10px;
+            font-weight: 500;
+            color: #FFFFFF;
+            border: 1px solid #80BD01;
+            border-radius: 5px;
+            background-color: #80BD01;
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 1s linear;
+                background-color: #000000;
+            }
+            &:hover:after {
+                opacity: .05
+            }
+        }
+    }
+
+    .reade-box {
+        padding: 10px;
+    }
+
+    .cnode {
+        color: #000000;
+    }
+
+    .reade {
+        margin-top: 15px;
+
+        a {
+            color: #80BD01;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

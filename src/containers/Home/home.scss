@@ -1,0 +1,51 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-05-06 20:47:42
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-05-06 20:58:26
+*/
+
+@charset "UTF-8";
+@import '../../assets/_variable.scss';
+
+.main-container {
+    width: $width;
+    margin: 20px auto;
+
+    .content-container {
+        box-shadow: 0 0 8px #CCCCCC;
+        background-color: #FFFFFF;
+    }
+
+    .topics-container {
+        float: left;
+        width: calc(100% - #{$sidebarWidth + 20});
+
+        .nav {
+            padding: 10px 0;
+            border-radius: 5px 5px 0 0;
+            background-color: $boxTopColor;
+
+            a {
+                padding: 2px 5px;
+                margin-left: 15px;
+                color: #80BD01;
+
+                &:hover {
+                    color: #333333;
+                }
+                &.active {
+                    color: #FFFFFF;
+                    border-radius: 3px;
+                    background-color: #80BD01;
+                }
+            }
+        }
+    }
+    .topics-list {
+        position: relative;
+        min-height: calc(100vh - 145px);
+        overflow: hidden;
+        border-radius: 0 0 5px 5px;
+    }
+}

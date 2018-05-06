@@ -1,0 +1,69 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-04-18 20:05:46
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-05-06 20:12:31
+*/
+
+@import "reset.scss";
+@import "variable.scss";
+
+/* 禁止选中文本 */
+.user-select-none {
+    @include user-select;
+}
+/* 不换行 */
+.white-space-nowrap {
+    white-space: nowrap;
+}
+/* 居中对齐 */
+.text-align-center {
+    text-align: center;
+}
+/* 向左对齐 */
+.text-align-left {
+    text-align: left;
+}
+/* 向右对齐 */
+.text-align-right {
+    text-align: right;
+}
+/* 没有边框 */
+.border-none {
+    border: none;
+}
+/* 阻止事件 */
+.pointer-events-none {
+    pointer-events: none;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.router-container {
+    @include display(flex)
+    flex-direction: column;
+
+    & > section {
+        min-height: 100vh;
+        @include prefix(flex, 1)
+    }
+}
+
+.go-top {
+    position: fixed;
+    z-index: 500;
+    bottom: 100px;
+    right: 30px;
+    padding: 5px 10px;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+
+    &:hover {
+        background-color: #F6F6F6;
+    }
+    p {
+        color: #666666
+    }
+}
