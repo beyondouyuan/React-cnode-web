@@ -2,7 +2,7 @@
 * @Author: beyondouyuan
 * @Date:   2018-05-06 19:56:52
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2018-05-06 20:14:57
+* @Last Modified time: 2018-05-11 16:57:18
 */
 
 @charset "UTF-8";
@@ -11,7 +11,6 @@
 @media screen and(max-width: $width) {
     .main-container {
         width: 100%;
-
         .topics-container {
             margin-left: 10px;
             width: calc(100% - #{$sidebarWidth + 40});

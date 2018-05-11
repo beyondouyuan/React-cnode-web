@@ -2,11 +2,11 @@
 * @Author: beyondouyuan
 * @Date:   2018-04-18 20:07:09
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2018-05-06 18:39:10
+* @Last Modified time: 2018-05-10 20:02:03
 */
 
 import React from 'react'
-import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'

@@ -2,8 +2,13 @@
  * @Author: beyondouyuan
  * @Date:   2018-05-06 17:20:24
  * @Last Modified by:   beyondouyuan
- * @Last Modified time: 2018-05-06 17:23:46
+ * @Last Modified time: 2018-05-10 17:58:47
  */
+
+export const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
 
 export const formatTime = date => {
     const year = date.getFullYear()
@@ -66,4 +71,22 @@ export const parseTime = (time, cFormat) => {
         return value || 0
     })
     return parse_time
+}
+
+export const getQueryString = key => {
+    const reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)")
+    const result = window.location.search.substr(1).match(reg)
+    return result ? decodeURIComponent(result[2]) : null
+}
+
+export const queryString = search => {
+    if( search.length === 0 ) return search;
+    var query = {};
+    var slice = search.replace('?', '');
+    var arr = slice.split('&')
+    arr.forEach(function (el) {
+        var split = el.split('=');
+        query[split[0]] = decodeURIComponent(split[1]);
+    });
+    return query;
 }

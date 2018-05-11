@@ -2,7 +2,7 @@
  * @Author: beyondouyuan
  * @Date:   2018-04-18 20:05:37
  * @Last Modified by:   beyondouyuan
- * @Last Modified time: 2018-05-06 18:33:44
+ * @Last Modified time: 2018-05-10 21:08:30
  */
 // import qs from 'qs'
 import request from '../utils'
@@ -39,14 +39,12 @@ export const requestTopics = option => {
 
 export const requestTopic = option => {
     const setting = {
-            url: parseAPI('topic'),
+            url: `${parseAPI('topic')}${option.id}`,
             method: 'GET',
             params: {
                 mdrender: true
             }
         }
-        // 合并自定义参数
-    Object.assign(setting, option)
     return request({
             ...setting
         })

@@ -2,7 +2,7 @@
 * @Author: beyondouyuan
 * @Date:   2018-05-06 20:47:42
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2018-05-06 20:58:26
+* @Last Modified time: 2018-05-10 20:39:57
 */
 
 @charset "UTF-8";
@@ -21,7 +21,7 @@
         float: left;
         width: calc(100% - #{$sidebarWidth + 20});
 
-        .nav {
+        .navigation {
             padding: 10px 0;
             border-radius: 5px 5px 0 0;
             background-color: $boxTopColor;
@@ -29,7 +29,7 @@
             a {
                 padding: 2px 5px;
                 margin-left: 15px;
-                color: #80BD01;
+                // color: #80BD01;
 
                 &:hover {
                     color: #333333;
@@ -47,5 +47,8 @@
         min-height: calc(100vh - 145px);
         overflow: hidden;
         border-radius: 0 0 5px 5px;
+    }
+    .pagination-container {
+        margin-top: 30px;
     }
 }

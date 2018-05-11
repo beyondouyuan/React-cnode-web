@@ -2,13 +2,15 @@
 * @Author: beyondouyuan
 * @Date:   2018-04-18 20:06:27
 * @Last Modified by:   beyondouyuan
-* @Last Modified time: 2018-05-06 17:48:56
+* @Last Modified time: 2018-05-10 20:49:47
 */
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { formatDate } from '../../utils/tools'
+import { Avatar } from 'antd'
+import './topics.scss';
 
 class TopicList extends Component {
     transTag = topic => {
@@ -61,14 +63,15 @@ class TopicList extends Component {
 
     render() {
         return (
-            <ul>
+            <ul className="topics-list">
                 {
                     this.props.topics.map(item => {
                         return (
                             <li key={item.id}>
                                 <div className="avatar">
                                     <Link to={`/user/${item.author.loginname}`}>
-                                        <img src={item.author.avatar_url} alt="头像" title={item.author.loginname} />
+                                        {/*<img src={item.author.avatar_url} alt="头像" title={item.author.loginname} />*/}
+                                        <Avatar src={item.author.avatar_url} size="large" />
                                     </Link>
                                 </div>
                                 {
@@ -76,7 +79,7 @@ class TopicList extends Component {
                                     <div className="reply-view">{item.reply_count} / {item.visit_count}</div>
                                 }
                                 {
-                                    item.tab && <span className={`tag ${thisi.transTag(item).className}`}>{this.transTag(item).text}</span>
+                                    item.tab && <span className={`tag ${this.transTag(item).className}`}>{this.transTag(item).text}</span>
                                 }
                                 <Link to={`/topic/${item.id}`} className="title">{item.title}</Link>
                                 <div className="last-reply_time">
@@ -91,7 +94,7 @@ class TopicList extends Component {
     }
 }
 
-TopicList propTypes = {
+TopicList.propTypes = {
   topics: PropTypes.array.isRequired
 }
 
